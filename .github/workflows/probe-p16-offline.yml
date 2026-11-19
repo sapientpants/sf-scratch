@@ -43,6 +43,7 @@ jobs:
           NESTED=(bwrap --unshare-all --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp -- bwrap --unshare-all --ro-bind / / --proc /proc --dev /dev -- true)
           LOOPBACK=(python3 -c "import socket; s = socket.socket(); s.bind(('127.0.0.1', 0)); s.listen(); c = socket.create_connection(s.getsockname(), 5); print('loopback ok')")
           EGRESS=(curl -sS -m 8 -o /dev/null https://github.com)
+          EGRESS_IP=(curl -sS -m 8 -o /dev/null https://1.1.1.1)
 
           r "label=${{ matrix.label }}"
           r "kernel=$(uname -r) $(uname -m)"
@@ -57,6 +58,7 @@ jobs:
           t basic "${BASIC[@]}"
           t nested "${NESTED[@]}"
           t egress "${EGRESS[@]}"
+          t egress_ip "${EGRESS_IP[@]}"
 
           # (b) A network namespace on the runner: loopback only, same user.
           STATE=netns
@@ -69,6 +71,7 @@ jobs:
           t nested "${OFF[@]}" "${NESTED[@]}"
           t loopback "${OFF[@]}" "${LOOPBACK[@]}"
           t egress "${OFF[@]}" "${EGRESS[@]}"
+          t egress_ip "${OFF[@]}" "${EGRESS_IP[@]}"
 
           # (a) A container with no network, as an unprivileged user.
           STATE=docker_build
@@ -86,6 +89,7 @@ jobs:
             t nested docker run --rm --network none "$@" p16 "${NESTED[@]}"
             t loopback docker run --rm --network none "$@" p16 "${LOOPBACK[@]}"
             t egress docker run --rm --network none "$@" p16 "${EGRESS[@]}"
+            t egress_ip docker run --rm --network none "$@" p16 "${EGRESS_IP[@]}"
           }
 
           in_docker docker_default
