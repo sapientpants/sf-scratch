@@ -1,0 +1,101 @@
+# Probe P-16 of sapientpants/software-factory (SPEC 23.2, issue #18):
+# can GitHub-hosted Linux runners run bubblewrap with user namespaces, and
+# do they expose a usable /dev/kvm? Every result is printed as a line that
+# starts with RESULT; the job itself never fails on a test.
+name: probe-p16
+
+on:
+  push:
+    branches: [probe/p-16]
+
+permissions: {}
+
+jobs:
+  probe:
+    strategy:
+      fail-fast: false
+      matrix:
+        label: [ubuntu-24.04, ubuntu-26.04, ubuntu-24.04-arm, ubuntu-26.04-arm]
+    runs-on: ${{ matrix.label }}
+    timeout-minutes: 10
+    steps:
+      - name: Probe
+        shell: bash
+        run: |
+          set -u
+          STATE=env
+
+          r() { echo "RESULT $STATE $*"; }
+
+          # t <name> <command...>: run a test, report ok or the exit code and last output.
+          t() {
+            local name=$1 out
+            shift
+            if out=$(timeout 30 "$@" 2>&1); then
+              r "$name=ok"
+            else
+              r "$name=fail($?) :: $(echo "$out" | tail -n 2 | tr '\n' ' ')"
+            fi
+          }
+
+          r "label=${{ matrix.label }}"
+          r "image=${ImageOS:-?} ${ImageVersion:-?}"
+          r "os=$(. /etc/os-release && echo "$PRETTY_NAME")"
+          r "kernel=$(uname -r) $(uname -m)"
+          r "vendor=$(cat /sys/class/dmi/id/sys_vendor 2>&1)"
+          r "product=$(cat /sys/class/dmi/id/product_name 2>&1)"
+          r "nproc=$(nproc)"
+          r "bwrap_preinstalled=$(command -v bwrap || echo no)"
+          r "bwrap_profile_files=$(ls /etc/apparmor.d 2>/dev/null | grep -i bwrap | tr '\n' ' ')"
+
+          if ! command -v bwrap >/dev/null; then
+            sudo apt-get update -qq >/dev/null 2>&1
+            sudo apt-get install -y -qq bubblewrap >/dev/null 2>&1
+          fi
+          r "bwrap_version=$(bwrap --version 2>&1)"
+          COPY=$RUNNER_TEMP/bwrap-copy
+          cp "$(command -v bwrap)" "$COPY"
+
+          suite() {
+            STATE=$1
+            r "sysctl=$(sysctl -n kernel.apparmor_restrict_unprivileged_userns 2>&1)"
+            r "bwrap_profiles_loaded=$(sudo aa-status 2>/dev/null | grep -c -E '^\s+(bwrap|unpriv_bwrap)$')"
+            t basic bwrap --unshare-all --die-with-parent --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp -- true
+            t caps_mount bwrap --unshare-all --uid 0 --gid 0 --cap-add ALL --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp -- mount -t tmpfs tmpfs /mnt
+            t nested bwrap --unshare-all --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp -- bwrap --unshare-all --ro-bind / / --proc /proc --dev /dev -- true
+            t copy_basic "$COPY" --unshare-all --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp -- true
+            t unshare_mount unshare --user --map-root-user --mount -- mount -t tmpfs tmpfs /mnt
+          }
+
+          suite stock
+
+          sudo sysctl -q -w kernel.apparmor_restrict_unprivileged_userns=0
+          suite sysctl0
+
+          PROFILE=/etc/apparmor.d/bwrap-userns-restrict
+          if [ -e "$PROFILE" ]; then
+            sudo sysctl -q -w kernel.apparmor_restrict_unprivileged_userns=1
+            STATE=unload
+            t apparmor_parser_R sudo apparmor_parser -R "$PROFILE"
+            suite unloaded_sysctl1
+            sudo sysctl -q -w kernel.apparmor_restrict_unprivileged_userns=0
+            suite unloaded_sysctl0
+          fi
+
+          STATE=dmesg
+          sudo dmesg 2>/dev/null | grep -i 'apparmor="DENIED"' | tail -n 6 | while read -r line; do r "$line"; done
+
+          STATE=kvm
+          r "cpu_virt_flags=$(grep -c -E -w 'vmx|svm' /proc/cpuinfo)"
+          r "dev=$(ls -l /dev/kvm 2>&1)"
+          r "rw_before=$([ -r /dev/kvm ] && [ -w /dev/kvm ] && echo yes || echo no)"
+          if [ -e /dev/kvm ]; then
+            echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules >/dev/null
+            sudo udevadm control --reload-rules
+            sudo udevadm trigger --name-match=kvm
+            sudo udevadm settle
+            r "dev_after=$(ls -l /dev/kvm 2>&1)"
+            r "rw_after=$([ -r /dev/kvm ] && [ -w /dev/kvm ] && echo yes || echo no)"
+            # KVM_GET_API_VERSION and KVM_CREATE_VM: the device answers and can make a VM.
+            t create_vm python3 -c "import fcntl, os; fd = os.open('/dev/kvm', os.O_RDWR); print('api', fcntl.ioctl(fd, 0xAE00, 0)); print('vmfd', fcntl.ioctl(fd, 0xAE01, 0))"
+          fi
