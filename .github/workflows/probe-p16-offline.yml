@@ -1,0 +1,97 @@
+# Follow-up to probe P-16 of sapientpants/software-factory (issue #18):
+# VAL-6 wants CI to build and test without network access. Can bubblewrap,
+# with a private /proc, still run (a) inside a network-less container and
+# (b) inside a network namespace on the runner itself? Every result is
+# printed as a line that starts with RESULT; the job never fails on a test.
+name: probe-p16-offline
+
+on:
+  push:
+    branches: [probe/p-16]
+
+permissions: {}
+
+jobs:
+  probe:
+    strategy:
+      fail-fast: false
+      matrix:
+        label: [ubuntu-24.04, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.label }}
+    timeout-minutes: 10
+    steps:
+      - name: Probe
+        shell: bash
+        run: |
+          set -u
+          STATE=env
+
+          r() { echo "RESULT $STATE $*"; }
+
+          # t <name> <command...>: run a test, report ok or the exit code and last output.
+          t() {
+            local name=$1 out
+            shift
+            if out=$(timeout 60 "$@" 2>&1); then
+              r "$name=ok"
+            else
+              r "$name=fail($?) :: $(echo "$out" | tail -n 2 | tr '\n' ' ')"
+            fi
+          }
+
+          BASIC=(bwrap --unshare-all --die-with-parent --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp -- true)
+          NESTED=(bwrap --unshare-all --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp -- bwrap --unshare-all --ro-bind / / --proc /proc --dev /dev -- true)
+          LOOPBACK=(python3 -c "import socket; s = socket.socket(); s.bind(('127.0.0.1', 0)); s.listen(); c = socket.create_connection(s.getsockname(), 5); print('loopback ok')")
+          EGRESS=(curl -sS -m 8 -o /dev/null https://github.com)
+
+          r "label=${{ matrix.label }}"
+          r "kernel=$(uname -r) $(uname -m)"
+          r "vendor=$(cat /sys/class/dmi/id/sys_vendor 2>&1)"
+          r "docker=$(docker --version 2>&1)"
+
+          sudo apt-get update -qq >/dev/null 2>&1
+          sudo apt-get install -y -qq bubblewrap >/dev/null 2>&1
+          sudo sysctl -q -w kernel.apparmor_restrict_unprivileged_userns=0
+
+          STATE=host
+          t basic "${BASIC[@]}"
+          t nested "${NESTED[@]}"
+          t egress "${EGRESS[@]}"
+
+          # (b) A network namespace on the runner: loopback only, same user.
+          STATE=netns
+          sudo ip netns add offline
+          sudo ip netns exec offline ip link set lo up
+          off() { sudo ip netns exec offline sudo -u "$USER" -- "$@"; }
+          r "whoami=$(off whoami 2>&1)"
+          t basic off "${BASIC[@]}"
+          t nested off "${NESTED[@]}"
+          t loopback off "${LOOPBACK[@]}"
+          t egress off "${EGRESS[@]}"
+
+          # (a) A container with no network, as an unprivileged user.
+          STATE=docker_build
+          t build docker build -q -t p16 - <<'EOF'
+          FROM ubuntu:24.04
+          RUN apt-get update -qq && apt-get install -y -qq bubblewrap python3 curl >/dev/null
+          USER ubuntu
+          EOF
+
+          in_docker() {
+            STATE=$1
+            shift
+            t basic docker run --rm --network none "$@" p16 "${BASIC[@]}"
+            t nested docker run --rm --network none "$@" p16 "${NESTED[@]}"
+            t loopback docker run --rm --network none "$@" p16 "${LOOPBACK[@]}"
+            t egress docker run --rm --network none "$@" p16 "${EGRESS[@]}"
+          }
+
+          in_docker docker_default
+          in_docker docker_seccomp_off --security-opt seccomp=unconfined
+          in_docker docker_apparmor_off --security-opt apparmor=unconfined
+          in_docker docker_seccomp_apparmor_off --security-opt seccomp=unconfined --security-opt apparmor=unconfined
+          in_docker docker_seccomp_apparmor_systempaths_off --security-opt seccomp=unconfined --security-opt apparmor=unconfined --security-opt systempaths=unconfined
+          in_docker docker_privileged --privileged
+
+          STATE=dmesg
+          sudo dmesg 2>/dev/null | grep -i 'apparmor="DENIED"' | tail -n 4 | while read -r line; do r "$line"; done
