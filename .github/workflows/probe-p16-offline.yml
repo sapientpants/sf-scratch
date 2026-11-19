@@ -62,20 +62,22 @@ jobs:
           STATE=netns
           sudo ip netns add offline
           sudo ip netns exec offline ip link set lo up
-          off() { sudo ip netns exec offline sudo -u "$USER" -- "$@"; }
-          r "whoami=$(off whoami 2>&1)"
-          t basic off "${BASIC[@]}"
-          t nested off "${NESTED[@]}"
-          t loopback off "${LOOPBACK[@]}"
-          t egress off "${EGRESS[@]}"
+          OFF=(sudo ip netns exec offline setpriv --reuid="$(id -u)" --regid="$(id -g)" --init-groups --)
+          r "whoami=$("${OFF[@]}" whoami 2>&1)"
+          r "links=$("${OFF[@]}" ip -o link show 2>&1 | cut -d: -f2 | tr -d ' ' | tr '\n' ' ')"
+          t basic "${OFF[@]}" "${BASIC[@]}"
+          t nested "${OFF[@]}" "${NESTED[@]}"
+          t loopback "${OFF[@]}" "${LOOPBACK[@]}"
+          t egress "${OFF[@]}" "${EGRESS[@]}"
 
           # (a) A container with no network, as an unprivileged user.
           STATE=docker_build
-          t build docker build -q -t p16 - <<'EOF'
+          if docker build -q -t p16 - >/dev/null 2>&1 <<'EOF'
           FROM ubuntu:24.04
           RUN apt-get update -qq && apt-get install -y -qq bubblewrap python3 curl >/dev/null
           USER ubuntu
           EOF
+          then r "build=ok"; else r "build=fail($?)"; fi
 
           in_docker() {
             STATE=$1
@@ -94,4 +96,4 @@ jobs:
           in_docker docker_privileged --privileged
 
           STATE=dmesg
-          sudo dmesg 2>/dev/null | grep -i 'apparmor="DENIED"' | tail -n 4 | while read -r line; do r "$line"; done
+          sudo dmesg 2>/dev/null | grep -i 'apparmor="DENIED"' | tail -n 4 | while read -r line; do r "$line"; done || true
