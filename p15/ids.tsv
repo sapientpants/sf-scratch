@@ -46,3 +46,11 @@ pr-pre-backslash	56
 pr-pre-zwj	57
 pr-pre-zwsp	58
 pr-pre-entity	59
+t-v-noscheme	80
+t-v-nohost	81
+t-v-zwsp-number	82
+t-v-zwsp-issues	83
+t-v-zwsp-owner	84
+t-v-lower-gh	85
+t-op-empty	86
+t-op-file	87

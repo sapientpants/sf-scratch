@@ -5,7 +5,8 @@
 # text as its body, an issue with the text in its title, and the text set as
 # the body of a pull request that the operator opened. Then one commit with
 # the text in its subject and one with the text in its body, pushed to a branch.
-# Usage: bot.sh text|commits   (in a clone of the scratch repository, with GH_TOKEN and REPO set)
+# `second` is the second round, written after the first was read.
+# Usage: bot.sh text|commits|second   (in a clone of the scratch repository, with GH_TOKEN and REPO set)
 set -u
 cd "$(dirname "$0")"
 v='X-GitHub-Api-Version: 2026-03-10'
@@ -57,6 +58,43 @@ for e in plain fence code backslash zwj zwsp entity; do
 done
 git push --quiet origin "$head:refs/heads/probe/p-15-commits"
 git log --format='%H %an <%ae> %s' "origin/main..$head"
+}
+
+# The second round. The factory edits its status comment in place, so: does text
+# that arrives by an edit act as text that was there from the start?
+second() {
+for e in plain fence code backslash zwj zwsp entity; do
+  echo "== $e: an issue and a comment, then the text as the comment's new body"
+  n=$(gh api --method POST "repos/$REPO/issues" -H "$v" -f title="P-15 probe: source, comment edited, $e" \
+    -f body="An issue of probe P-15. Its one comment is edited to hold the text." --jq .number)
+  echo "cedit-$e=$n"
+  sleep 2
+  c=$(gh api --method POST "repos/$REPO/issues/$n/comments" -H "$v" \
+    -f body="A comment of probe P-15. The workflow replaces this text." --jq .id)
+  sleep 2
+  gh api --method PATCH "repos/$REPO/issues/comments/$c" -H "$v" -F body=@"payload/comment-$e.md" \
+    --jq '{id, user: .user.login, created_at, updated_at}'
+  sleep 2
+done
+
+echo "== plain: an issue, then the text as its new body"
+n=$(gh api --method POST "repos/$REPO/issues" -H "$v" -f title="P-15 probe: source, body edited, plain" \
+  -f body="An issue of probe P-15. The workflow replaces this body." --jq .number)
+sleep 2
+gh api --method PATCH "repos/$REPO/issues/$n" -H "$v" -F body=@payload/body-plain.md --jq "$show"
+sleep 2
+
+echo "== other spellings of a reference: in a comment, and in a commit on a branch"
+n=$(gh api --method POST "repos/$REPO/issues" -H "$v" -f title="P-15 probe: source, comment, other spellings" \
+  -f body="An issue of probe P-15. Its one comment holds the text." --jq .number)
+sleep 2
+gh api --method POST "repos/$REPO/issues/$n/comments" -H "$v" -F body=@payload/variants.md \
+  --jq '{id, user: .user.login, created_at}'
+git config user.name 'github-actions[bot]'
+git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+head=$(git commit-tree "$(git rev-parse 'origin/main^{tree}')" -p "$(git rev-parse origin/main)" < payload/variants-commit.txt) || exit 1
+echo "variants-commit=$head"
+git push --quiet origin "$head:refs/heads/probe/p-15-variants"
 }
 
 "$1"
