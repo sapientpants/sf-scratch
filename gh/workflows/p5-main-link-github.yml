@@ -1,9 +1,0 @@
-name: p5-main-link-github
-on:
-  push:
-    branches: [main]
-jobs:
-  ran:
-    runs-on: ubuntu-24.04
-    steps:
-      - run: echo "p5-main-link-github ran"
