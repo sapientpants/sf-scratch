@@ -5,8 +5,8 @@
 # text as its body, an issue with the text in its title, and the text set as
 # the body of a pull request that the operator opened. Then one commit with
 # the text in its subject and one with the text in its body, pushed to a branch.
-# `second` is the second round, written after the first was read.
-# Usage: bot.sh text|commits|second   (in a clone of the scratch repository, with GH_TOKEN and REPO set)
+# `second` and `fourth` are later rounds, each written after the one before was read.
+# Usage: bot.sh text|commits|second|fourth   (in a clone of the scratch repository, with GH_TOKEN and REPO set)
 set -u
 cd "$(dirname "$0")"
 v='X-GitHub-Api-Version: 2026-03-10'
@@ -95,6 +95,24 @@ git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 head=$(git commit-tree "$(git rev-parse 'origin/main^{tree}')" -p "$(git rev-parse origin/main)" < payload/variants-commit.txt) || exit 1
 echo "variants-commit=$head"
 git push --quiet origin "$head:refs/heads/probe/p-15-variants"
+}
+
+# The fourth round: character references, and a fence that the text ends.
+# One issue for each case, with the text as its body.
+fourth() {
+for f in payload/case-*.md; do
+  name=${f#payload/case-}; name=${name%.md}
+  echo "== $name: an issue with the text as its body"
+  gh api --method POST "repos/$REPO/issues" -H "$v" -f title="P-15 probe: source, body, case $name" \
+    -F body=@"$f" --jq "$show"
+  sleep 2
+done
+echo "== a reference spelt with a character reference: in a comment"
+n=$(gh api --method POST "repos/$REPO/issues" -H "$v" -f title="P-15 probe: source, comment, character-reference spellings" \
+  -f body="An issue of probe P-15. Its one comment holds the text." --jq .number)
+sleep 2
+gh api --method POST "repos/$REPO/issues/$n/comments" -H "$v" -F body=@payload/variants-charref.md \
+  --jq '{id, user: .user.login, created_at}'
 }
 
 "$1"

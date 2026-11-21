@@ -54,3 +54,14 @@ t-v-zwsp-owner	84
 t-v-lower-gh	85
 t-op-empty	86
 t-op-file	87
+t-v-zwsp-both	97
+t-op-as-bot	98
+t-v-pull	47
+t-v-ref-num-raw	100
+t-v-ref-hex-raw	101
+t-v-ref-num-z	102
+t-v-ref-hex-z	103
+t-v-ref-dec-z	104
+t-v-ref-amp	105
+t-c-fence-broken	106
+t-c-fence-long	107
