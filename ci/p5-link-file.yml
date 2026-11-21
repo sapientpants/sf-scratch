@@ -1,0 +1,9 @@
+name: p5-link-file
+on:
+  push:
+    branches: ["probe/p-5-*"]
+jobs:
+  ran:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "p5-link-file ran"
