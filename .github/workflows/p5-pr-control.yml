@@ -1,0 +1,7 @@
+name: p5-pr-control
+on: pull_request
+jobs:
+  ran:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "p5-pr-control ran"
