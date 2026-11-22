@@ -1,1 +1,0 @@
-rootname/inner.txt
