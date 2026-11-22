@@ -1,3 +1,3 @@
-/sentinel/s03.txt @sapientpants
-# P-28 s03
-**/my?file.txt @sapientpants
+/sentinel/s04.txt @sapientpants
+# P-28 s04
+"**/my file.txt" @sapientpants
