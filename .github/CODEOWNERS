@@ -1,3 +1,3 @@
-/sentinel/t11.txt @sapientpants
-# P-28 t11
-/docs/** @sapientpants
+/sentinel/t12.txt @sapientpants
+# P-28 t12
+**/**/*.snap @sapientpants
