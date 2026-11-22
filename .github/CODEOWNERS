@@ -1,3 +1,11 @@
-/sentinel/s11.txt @sapientpants
-# P-28 s11
-**/a?b.md @sapientpants
+/sentinel/e01.txt @sapientpants
+# P-28 e01
+**/Cargo.toml @sapientpants
+**/[ab].rs @sapientpants
+!**/GLOSSARY.md @sapientpants
+**/SPEC.md @no-such-user-p28-probe
+**/NOTES.md sapientpants
+/docs/research/**
+**/.mcp.json @sapientpants @no-such-user-p28-probe
+**/x\[y @sapientpants
+**/sp/** @sapientpants
