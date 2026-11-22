@@ -1,3 +1,3 @@
-/sentinel/t01.txt @sapientpants
-# P-28 t01
-**/crates/** @sapientpants
+/sentinel/t02.txt @sapientpants
+# P-28 t02
+**/Cargo.toml @sapientpants
