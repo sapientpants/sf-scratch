@@ -1,9 +1,0 @@
-name: p5app-op-two
-on:
-  push:
-    branches: ["probe/p-5-app-*"]
-jobs:
-  echo:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo p5app-op-two
