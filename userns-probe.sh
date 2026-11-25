@@ -9,6 +9,7 @@
 #     bash userns-probe.sh            # the facts, the tests, and the tests again in a
 #                                     # network namespace that holds only `lo` (DEV-6)
 #     bash userns-probe.sh tests X    # the tests alone, with X as the state in each line
+#     bash userns-probe.sh kvm        # the /dev/kvm checks alone, for `sudo -g kvm`
 #
 # Run it as an ordinary user. The network namespace needs `sudo` without a password; where
 # there is none that part is skipped and the script says so. It changes nothing that
@@ -28,13 +29,14 @@ r() { echo "RESULT $STATE $*"; }
 # One line of at most two lines of output, for the end of a RESULT line.
 tail2() { tail -n 2 | tr '\n' ' ' | sed 's/ *$//'; }
 
-# t <name> <command...>: the command is expected to succeed.
+# t <name> <command...>: the command is expected to succeed. Returns its exit status.
 t() {
   local name=$1 out rc
   shift
   out=$(timeout 60 "$@" 2>&1)
   rc=$?
   if [ "$rc" -eq 0 ]; then r "$name=ok"; else r "$name=fail($rc) :: $(echo "$out" | tail2)"; fi
+  return "$rc"
 }
 
 # refused <name> <command...>: the command is expected to fail, because the sandbox
@@ -72,7 +74,7 @@ facts() {
   value /proc/sys/kernel/apparmor_restrict_unprivileged_userns
   value /sys/kernel/security/lsm
   r "apparmor-files=$(find /etc/apparmor.d -maxdepth 1 \( -iname '*bwrap*' -o -iname '*userns*' \) 2>/dev/null | tr '\n' ' ')"
-  r "sudo-without-password=$(sudo -n true 2>/dev/null && echo yes || echo no)"
+  r "sudo-n=$(sudo -n true 2>/dev/null && echo yes || echo no)"
 }
 
 kvm() {
@@ -82,7 +84,7 @@ kvm() {
     return
   fi
   r "device=$(ls -l /dev/kvm 2>&1)"
-  r "group=$(getent group kvm | sed 's/:[^:]*$/:<members>/') member=$(id -Gn | tr ' ' '\n' | grep -c -x kvm)"
+  r "group=$(getent group kvm | sed 's/:[^:]*$/:<members>/') in-group=$(id -Gn | tr ' ' '\n' | grep -c -x kvm)"
   t open sh -c 'exec 3<>/dev/kvm'
   # KVM_GET_API_VERSION is _IO(0xAE, 0x00), KVM_CREATE_VM _IO(0xAE, 0x01),
   # KVM_CHECK_EXTENSION _IO(0xAE, 0x03) and KVM_CREATE_VCPU _IO(0xAE, 0x41). On arm64 the
@@ -148,7 +150,13 @@ tests() {
   # one by one, so that --unshare-user is explicit, as in the stand-in of P-6.
   local nu=(--unshare-user --unshare-pid --unshare-ipc --unshare-net --unshare-uts --unshare-cgroup-try
     --disable-userns --die-with-parent --ro-bind / / --proc /proc --dev /dev --tmpfs /tmp)
-  t nouserns-starts bwrap "${nu[@]}" -- true
+  # Whether --unshare-all, which asks for the user namespace with --unshare-user-try,
+  # is enough for the option.
+  t nouserns-unshare-all bwrap "${basic[@]}" --disable-userns -- true
+  if ! t nouserns-starts bwrap "${nu[@]}" -- true; then
+    r "nouserns-others=not run: the outer sandbox does not start"
+    return
+  fi
   r "nouserns-limit=$(bwrap "${nu[@]}" -- cat /proc/sys/user/max_user_namespaces 2>&1 | tail2)"
   r "nouserns-links=$(bwrap "${nu[@]}" -- sed -n '3,$s/:.*//p' /proc/net/dev 2>&1 | tr -s ' \n' ' ')"
   refused nouserns-nested bwrap "${nu[@]}" -- bwrap "${basic[@]}" -- true
@@ -159,10 +167,6 @@ tests() {
     sh -c 'echo 64 >/proc/sys/user/max_user_namespaces; unshare --user --map-root-user true'
   # A filter and the option together, as the factory's sandbox will have them.
   r "nouserns-seccomp=$(bwrap "${nu[@]}" --seccomp 9 -- grep Seccomp /proc/self/status 9<"$tmp/allow.bpf" 2>&1 | tr -s '\t\n' ' ')"
-  # Whether --unshare-all, which asks for the user namespace with --unshare-user-try,
-  # is enough for the option.
-  t nouserns-unshare-all bwrap "${basic[@]}" --disable-userns -- true
-  refused nouserns-unshare-all-nested bwrap "${basic[@]}" --disable-userns -- bwrap "${basic[@]}" -- true
   # The control: the outer sandbox without the option lets the same inner one start.
   local ctl=("${nu[@]/--disable-userns/--new-session}")
   t control-nested bwrap "${ctl[@]}" -- bwrap "${basic[@]}" -- true
@@ -170,6 +174,10 @@ tests() {
 
 if [ "${1:-}" = tests ]; then
   tests "${2:?state}"
+  exit 0
+fi
+if [ "${1:-}" = kvm ]; then
+  kvm
   exit 0
 fi
 
