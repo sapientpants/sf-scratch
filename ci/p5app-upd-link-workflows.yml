@@ -1,0 +1,9 @@
+name: p5app-upd-link-workflows
+on:
+  push:
+    branches: ["probe/p-5-app-*"]
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo p5app-upd-link-workflows
