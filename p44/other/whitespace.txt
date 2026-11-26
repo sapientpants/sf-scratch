@@ -1,0 +1,20 @@
+ws 000000 alpha bravo charlie delta echo
+ws 000001 bravo charlie delta echo foxtr
+ws 000002 charlie delta echo foxtrot gol
+ws 000003 delta echo foxtrot golf hotel 
+ws 000004 echo foxtrot golf hotel india 
+ws 000005 foxtrot golf hotel india julie
+ws 000006 golf hotel india juliet kilo l
+ws 000007 hotel india juliet kilo lima a
+ws 000008 india juliet kilo lima alpha b
+ws 000009 juliet kilo lima alpha bravo c
+ws 000010 kilo lima alpha bravo charlie 
+ws 000011 lima alpha bravo charlie delta
+ws 000012 alpha bravo charlie delta echo
+ws 000013 bravo charlie delta echo foxtr
+ws 000014 charlie delta echo foxtrot gol
+ws 000015 delta echo foxtrot golf hotel 
+ws 000016 echo foxtrot golf hotel india 
+ws 000017 foxtrot golf hotel india julie
+ws 000018 golf hotel india juliet kilo l
+ws 000019 hotel india juliet kilo lima a
