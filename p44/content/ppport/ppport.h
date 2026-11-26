@@ -1,0 +1,22 @@
+/*
+ * filler
+ * filler
+ * filler
+ * filler
+ * filler
+ * filler
+ * filler
+ * Automatically created by Devel::PPPort running under perl 5.036000.
+ */
+#ifndef P44_H
+#define P44_H
+
+int answer(void);
+int other(void);
+int third(void);
+int fourth(void);
+int fifth(void);
+int sixth(void);
+int seventh(void);
+
+#endif

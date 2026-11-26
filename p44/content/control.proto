@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package p44;
+
+message Answer {
+  int32 value = 1;
+}
