@@ -18,7 +18,7 @@ rename-edit 000016 echo foxtrot golf hot
 rename-edit 000017 foxtrot golf hotel in
 rename-edit 000018 golf hotel india juli
 rename-edit 000019 hotel india juliet ki
-rename-edit 000020 india juliet kilo lim
+rename-EDIT 000020 india juliet kilo lim
 rename-edit 000021 juliet kilo lima alph
 rename-edit 000022 kilo lima alpha bravo
 rename-edit 000023 lima alpha bravo char
