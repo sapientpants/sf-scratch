@@ -1,0 +1,8 @@
+{
+    "_meta": {
+        "hash": { "sha256": "0000" },
+        "pipfile-spec": 6
+    },
+    "default": {},
+    "develop": {}
+}

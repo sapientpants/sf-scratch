@@ -1,0 +1,5 @@
+hash: 0000
+updated: 2020-01-01T00:00:00Z
+imports:
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
