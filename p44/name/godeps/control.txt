@@ -1,0 +1,5 @@
+{
+  "ImportPath": "example.com/p44",
+  "GoVersion": "go1.22",
+  "Deps": []
+}

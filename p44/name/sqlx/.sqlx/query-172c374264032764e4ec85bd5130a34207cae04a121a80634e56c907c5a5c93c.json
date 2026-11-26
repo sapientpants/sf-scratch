@@ -1,0 +1,10 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT 1",
+  "describe": {
+    "columns": [],
+    "parameters": { "Right": 0 },
+    "nullable": []
+  },
+  "hash": "x"
+}
