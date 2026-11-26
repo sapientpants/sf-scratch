@@ -1,100 +1,740 @@
-line 000000 alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta........................................................................................................................................................................................................................................................................
-line 000001 bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo.........................................................................................................................................................................................................................................................................
-line 000002 charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot.......................................................................................................................................................................................................................................................................
-line 000003 delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf..........................................................................................................................................................................................................................................................................
-line 000004 echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel..........................................................................................................................................................................................................................................................................
-line 000005 foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india.........................................................................................................................................................................................................................................................................
-line 000006 golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet..........................................................................................................................................................................................................................................................................
-line 000007 hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo..........................................................................................................................................................................................................................................................................
-line 000008 india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima...........................................................................................................................................................................................................................................................................
-line 000009 juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha...........................................................................................................................................................................................................................................................................
-line 000010 kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo............................................................................................................................................................................................................................................................................
-line 000011 lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie.........................................................................................................................................................................................................................................................................
-line 000012 alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta........................................................................................................................................................................................................................................................................
-line 000013 bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo.........................................................................................................................................................................................................................................................................
-line 000014 charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot.......................................................................................................................................................................................................................................................................
-line 000015 delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf..........................................................................................................................................................................................................................................................................
-line 000016 echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel..........................................................................................................................................................................................................................................................................
-line 000017 foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india.........................................................................................................................................................................................................................................................................
-line 000018 golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet..........................................................................................................................................................................................................................................................................
-line 000019 hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo..........................................................................................................................................................................................................................................................................
-line 000020 india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima...........................................................................................................................................................................................................................................................................
-line 000021 juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha...........................................................................................................................................................................................................................................................................
-line 000022 kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo............................................................................................................................................................................................................................................................................
-line 000023 lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie.........................................................................................................................................................................................................................................................................
-line 000024 alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta........................................................................................................................................................................................................................................................................
-line 000025 bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo.........................................................................................................................................................................................................................................................................
-line 000026 charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot.......................................................................................................................................................................................................................................................................
-line 000027 delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf..........................................................................................................................................................................................................................................................................
-line 000028 echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel..........................................................................................................................................................................................................................................................................
-line 000029 foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india.........................................................................................................................................................................................................................................................................
-line 000030 golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet..........................................................................................................................................................................................................................................................................
-line 000031 hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo..........................................................................................................................................................................................................................................................................
-line 000032 india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima...........................................................................................................................................................................................................................................................................
-line 000033 juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha...........................................................................................................................................................................................................................................................................
-line 000034 kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo............................................................................................................................................................................................................................................................................
-line 000035 lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie.........................................................................................................................................................................................................................................................................
-line 000036 alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta........................................................................................................................................................................................................................................................................
-line 000037 bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo.........................................................................................................................................................................................................................................................................
-line 000038 charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot.......................................................................................................................................................................................................................................................................
-line 000039 delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf..........................................................................................................................................................................................................................................................................
-line 000040 echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel..........................................................................................................................................................................................................................................................................
-line 000041 foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india.........................................................................................................................................................................................................................................................................
-line 000042 golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet..........................................................................................................................................................................................................................................................................
-line 000043 hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo..........................................................................................................................................................................................................................................................................
-line 000044 india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima...........................................................................................................................................................................................................................................................................
-line 000045 juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha...........................................................................................................................................................................................................................................................................
-line 000046 kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo............................................................................................................................................................................................................................................................................
-line 000047 lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie.........................................................................................................................................................................................................................................................................
-line 000048 alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta........................................................................................................................................................................................................................................................................
-line 000049 bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo.........................................................................................................................................................................................................................................................................
-line 000050 charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot.......................................................................................................................................................................................................................................................................
-line 000051 delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf..........................................................................................................................................................................................................................................................................
-line 000052 echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel..........................................................................................................................................................................................................................................................................
-line 000053 foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india.........................................................................................................................................................................................................................................................................
-line 000054 golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet..........................................................................................................................................................................................................................................................................
-line 000055 hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo..........................................................................................................................................................................................................................................................................
-line 000056 india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima...........................................................................................................................................................................................................................................................................
-line 000057 juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha...........................................................................................................................................................................................................................................................................
-line 000058 kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo............................................................................................................................................................................................................................................................................
-line 000059 lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie.........................................................................................................................................................................................................................................................................
-line 000060 alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta........................................................................................................................................................................................................................................................................
-line 000061 bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo.........................................................................................................................................................................................................................................................................
-line 000062 charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot.......................................................................................................................................................................................................................................................................
-line 000063 delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf..........................................................................................................................................................................................................................................................................
-line 000064 echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel..........................................................................................................................................................................................................................................................................
-line 000065 foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india.........................................................................................................................................................................................................................................................................
-line 000066 golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet..........................................................................................................................................................................................................................................................................
-line 000067 hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo..........................................................................................................................................................................................................................................................................
-line 000068 india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima...........................................................................................................................................................................................................................................................................
-line 000069 juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha...........................................................................................................................................................................................................................................................................
-line 000070 kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo............................................................................................................................................................................................................................................................................
-line 000071 lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie.........................................................................................................................................................................................................................................................................
-line 000072 alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta........................................................................................................................................................................................................................................................................
-line 000073 bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo.........................................................................................................................................................................................................................................................................
-line 000074 charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot.......................................................................................................................................................................................................................................................................
-line 000075 delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf..........................................................................................................................................................................................................................................................................
-line 000076 echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel..........................................................................................................................................................................................................................................................................
-line 000077 foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india.........................................................................................................................................................................................................................................................................
-line 000078 golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet..........................................................................................................................................................................................................................................................................
-line 000079 hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo..........................................................................................................................................................................................................................................................................
-line 000080 india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima...........................................................................................................................................................................................................................................................................
-line 000081 juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha...........................................................................................................................................................................................................................................................................
-line 000082 kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo............................................................................................................................................................................................................................................................................
-line 000083 lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie.........................................................................................................................................................................................................................................................................
-line 000084 alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta........................................................................................................................................................................................................................................................................
-line 000085 bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo.........................................................................................................................................................................................................................................................................
-line 000086 charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot.......................................................................................................................................................................................................................................................................
-line 000087 delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf..........................................................................................................................................................................................................................................................................
-line 000088 echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel..........................................................................................................................................................................................................................................................................
-line 000089 foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india.........................................................................................................................................................................................................................................................................
-line 000090 golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet..........................................................................................................................................................................................................................................................................
-line 000091 hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo..........................................................................................................................................................................................................................................................................
-line 000092 india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima...........................................................................................................................................................................................................................................................................
-line 000093 juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha...........................................................................................................................................................................................................................................................................
-line 000094 kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo............................................................................................................................................................................................................................................................................
-line 000095 lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie.........................................................................................................................................................................................................................................................................
-line 000096 alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta........................................................................................................................................................................................................................................................................
-line 000097 bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo.........................................................................................................................................................................................................................................................................
-line 000098 charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot.......................................................................................................................................................................................................................................................................
-line 000099 delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf hotel india juliet kilo lima alpha bravo charlie delta echo foxtrot golf..........................................................................................................................................................................................................................................................................
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
+line 
