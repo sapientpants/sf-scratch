@@ -8,7 +8,7 @@ mod 000006 golf hotel india juliet kilo
 mod 000007 hotel india juliet kilo lima 
 mod 000008 india juliet kilo lima alpha 
 mod 000009 juliet kilo lima alpha bravo 
-mod 000010 kilo lima alpha bravo charlie
+MOD 000010 kilo lima alpha bravo charlie
 mod 000011 lima alpha bravo charlie delt
 mod 000012 alpha bravo charlie delta ech
 mod 000013 bravo charlie delta echo foxt
