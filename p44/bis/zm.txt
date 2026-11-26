@@ -228,3 +228,7 @@ line 000226 kilo lima alpha bravo charli
 line 000227 lima alpha bravo charlie del
 line 000228 alpha bravo charlie delta ec
 line 000229 bravo charlie delta echo fox
+line 000230 charlie delta echo foxtrot g
+line 000231 delta echo foxtrot golf hote
+line 000232 echo foxtrot golf hotel indi
+line 000233 foxtrot golf hotel india jul
