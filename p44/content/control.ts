@@ -1,0 +1,11 @@
+export function answer(): number {
+  let total = 0;
+  for (let i = 0; i < 10; i++) {
+    total += i;
+  }
+  return total;
+}
+
+export function other(): number {
+  return 1;
+}

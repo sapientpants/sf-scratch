@@ -1,0 +1,16 @@
+/* GIMP RGB C-Source image dump (image.c) */
+
+#include <stdio.h>
+
+int answer(void) {
+  int total = 0;
+  for (int i = 0; i < 10; i++) {
+    total += i;
+  }
+  return total;
+}
+
+int main(void) {
+  printf("%d\n", answer());
+  return 0;
+}

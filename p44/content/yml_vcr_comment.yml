@@ -1,0 +1,10 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://example.com/
+  response:
+    status:
+      code: 200
+    body:
+      string: ok
+# recorded_with: VCR
