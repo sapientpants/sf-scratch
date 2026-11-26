@@ -232,3 +232,5 @@ line 000230 charlie delta echo foxtrot g
 line 000231 delta echo foxtrot golf hote
 line 000232 echo foxtrot golf hotel indi
 line 000233 foxtrot golf hotel india jul
+line 000234 golf hotel india juliet kilo
+line 000235 hotel india juliet kilo lima
